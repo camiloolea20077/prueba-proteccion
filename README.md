@@ -1,32 +1,27 @@
-# Motor de Priorización y Paginación de Tickets
+# PruebaFront
 
-Este módulo implementa un **motor de priorización dinámica de tickets** con **paginación a nivel de base de datos**, usando **Spring Boot + JdbcTemplate + PostgreSQL**.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.16.
 
-El objetivo es ordenar los tickets **no solo por un campo fijo**, sino por una **prioridad calculada en tiempo real**, teniendo en cuenta:
-- Tipo de ticket
-- Prioridad manual
-- Tiempo transcurrido desde su creación
+## Development server
 
----
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## 🚀 ¿Qué problema resuelve?
+## Code scaffolding
 
-En sistemas de soporte, los tickets antiguos pueden quedar olvidados si solo se ordenan por fecha o prioridad manual.
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-Este motor garantiza que:
-- Los **INCIDENTES** siempre tengan más peso.
-- Los tickets **ganen prioridad con el tiempo**.
-- El orden sea **justo, automático y dinámico**.
-- La paginación sea **eficiente**, incluso con miles de registros.
+## Build
 
----
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## 🧠 Lógica de Prioridad
+## Running unit tests
 
-La prioridad final se calcula en la base de datos con la siguiente fórmula:
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-```sql
-prioridad_final =
-    prioridad_por_tipo
-    + prioridad_manual
-    + horas_transcurridas_desde_creacion
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
